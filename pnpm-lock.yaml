@@ -28,7 +28,7 @@ specifiers:
   unplugin-auto-import: ^0.4.13
   unplugin-icons: ^0.12.18
   unplugin-vue-components: ^0.17.2
-  up-core: github:lay2dev/up-core
+  up-core-test: ^0.1.2
   vite: ^2.6.13
   vite-plugin-inspect: ^0.3.10
   vite-plugin-md: ^0.11.4
@@ -50,7 +50,7 @@ dependencies:
   nprogress: 0.2.0
   pinia: 2.0.2_typescript@4.4.4+vue@3.2.21
   prism-theme-vars: 0.2.2
-  up-core: github.com/lay2dev/up-core/a5b1ae502d5ec1c30410600f7282e90ec5f950d0
+  up-core-test: 0.1.2
   vue: 3.2.21
   vue-demi: 0.12.1_vue@3.2.21
   vue-i18n: 9.1.9_vue@3.2.21
@@ -6666,6 +6666,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /up-core-test/0.1.2:
+    resolution: {integrity: sha512-iiPrVeWyyLsTGjRZbuksluBtrGrKxVywFrrCazkeW1fK56BuvTQkO3S6xTOe+xbyoYL5afZiU1+7v+pM2gCjFA==}
+    engines: {node: '>=10'}
+    dev: false
+
   /upath/1.2.0:
     resolution: {integrity: sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==}
     engines: {node: '>=4'}
@@ -7462,12 +7467,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-  github.com/lay2dev/up-core/a5b1ae502d5ec1c30410600f7282e90ec5f950d0:
-    resolution: {tarball: https://codeload.github.com/lay2dev/up-core/tar.gz/a5b1ae502d5ec1c30410600f7282e90ec5f950d0}
-    name: up-core
-    version: 0.1.0
-    engines: {node: '>=10'}
-    prepare: true
-    requiresBuild: true
-    dev: false

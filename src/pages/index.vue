@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UP, { UPAuthMessage } from 'up-core'
+import UP, { UPAuthMessage } from 'up-core-test'
 import axios from 'axios'
 import { useUserStore } from '~/stores/user'
 
