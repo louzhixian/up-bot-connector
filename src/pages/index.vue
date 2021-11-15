@@ -20,6 +20,9 @@ const dcid = computed(() => {
 
 const dcuid = computed(() => router.currentRoute.value.query.dcuid)
 
+const openModal = ref(false)
+const targetUrl = `discord:///channels/${Guild}/${ChannelGeneral}`
+
 const connect = async() => {
   UP.config(
     't.app.unipass.id',
@@ -47,9 +50,7 @@ const login = async() => {
       sig,
     },
   })
-
-  const targetUrl = `discord:///channels/${Guild}/${ChannelGeneral}`
-  window.location.href = targetUrl
+  openModal.value = true
 }
 
 const { t } = useI18n()
@@ -71,37 +72,38 @@ const { t } = useI18n()
 
     <div class="py-4" />
 
-    <input
-      id="input"
-      v-model="dcid"
-      :placeholder="t('intro.your-discord-id')"
-      :aria-label="t('intro.your-discord-id')"
-      type="text"
-      autocomplete="false"
-      p="x-4 y-2"
-      w="250px"
-      text="center"
-      disabled
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="connect"
-    >
+    <button class="btn btn-active lowercase">
+      {{ dcid }}
+    </button>
 
     <div class="flex-col">
       <button
-        class="m-8 text-lg btn"
+        class="m-8 text-lg btn btn-primary normal-case"
         @click="name.length ? disconnect() : connect()"
       >
         {{ name.length ? `UPID: ${name}` : t('button.connect') }}
       </button>
       <button
-        class="m-8 text-lg btn"
+        class="m-8 text-lg btn btn-primary normal-case"
         :disabled="!name.length"
         @click="login"
       >
         {{ t('button.authorize') }}
       </button>
+    </div>
+
+    <!-- <label for="my-modal-2" class="btn btn-secondary modal-button">open modal</label> -->
+    <input id="my-modal-2" v-model="openModal" type="checkbox" class="modal-toggle">
+    <div class="modal">
+      <div class="modal-box">
+        <p class="text-2xl text-success">
+          🎉 Authorization Complete!
+        </p>
+        <div class="modal-action mt-12">
+          <label for="my-modal-2" class="btn btn-sm">Close</label>
+          <a for="my-modal-2" :href="targetUrl" class="btn btn-sm btn-primary">Return to Discord</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
