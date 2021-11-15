@@ -21,7 +21,7 @@ const dcid = computed(() => {
 const dcuid = computed(() => router.currentRoute.value.query.dcuid)
 
 const openModal = ref(false)
-const targetUrl = `discord:///channels/${Guild}/${ChannelGeneral}`
+// const targetUrl = `discord:///channels/${Guild}/${ChannelGeneral}`
 
 const connect = async() => {
   UP.config(
@@ -97,11 +97,13 @@ const { t } = useI18n()
     <div class="modal">
       <div class="modal-box">
         <p class="text-2xl text-success">
-          🎉 Authorization Complete!
+          🎉 Authorization Success 🎉
+        </p>
+        <p class="text-lg mt-6">
+          Please close this page and check your discord for welcome message
         </p>
         <div class="modal-action mt-12">
-          <label for="my-modal-2" class="btn btn-sm">Close</label>
-          <a for="my-modal-2" :href="targetUrl" class="btn btn-sm btn-primary">Return to Discord</a>
+          <label for="my-modal-2" class="btn btn-primary normal-case">Got it</label>
         </div>
       </div>
     </div>
