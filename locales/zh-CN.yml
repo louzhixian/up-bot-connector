@@ -1,0 +1,16 @@
+button:
+  about: 关于
+  authorize: 用 UniPass 授权
+  back: 返回
+  connect: 连接 UniPass
+  go: 确定
+  home: 首页
+  toggle_dark: 切换深色模式
+  toggle_langs: 切换语言
+intro:
+  aka: 也叫
+  desc: 向机器人表明身份，开始元宇宙的旅程
+  dynamic-route: 动态路由演示
+  hi: 你好，{name}
+  your-discord-id: 你的 Discord ID
+not-found: 未找到页面

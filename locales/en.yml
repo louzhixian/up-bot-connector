@@ -1,0 +1,16 @@
+button:
+  about: About
+  authorize: Authorize with UniPass
+  back: Back
+  connect: Connect UniPass
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+intro:
+  desc: Prove your identity to the bot and enjoy the Metaverse
+  dynamic-route: Demo of dynamic route
+  hi: Hi, {name}!
+  aka: Also known as
+  your-discord-id: Your Discord ID
+not-found: Not found
