@@ -3,6 +3,9 @@ import UP, { UPAuthMessage } from 'up-core-test'
 import axios from 'axios'
 import { useUserStore } from '~/stores/user'
 
+const Guild = '881192262439166023'
+const ChannelGeneral = '881192262439166025'
+
 const user = useUserStore()
 const name = computed(() => user.savedName)
 
@@ -36,9 +39,6 @@ const login = async() => {
   const upMessage = new UPAuthMessage('PLAIN_MSG', name.value, message)
   const sig = await UP.authorize(upMessage)
 
-  // eslint-disable-next-line no-console
-  console.log('Authorized: ', sig)
-
   axios.post('https://dev--up-bot.yamen.autocode.gg/', {
     payload: {
       upid: name.value,
@@ -47,6 +47,9 @@ const login = async() => {
       sig,
     },
   })
+
+  const targetUrl = `discord:///channels/${Guild}/${ChannelGeneral}`
+  window.location.href = targetUrl
 }
 
 const { t } = useI18n()
