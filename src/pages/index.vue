@@ -27,7 +27,7 @@ const connect = async() => {
   UP.config(
     't.app.unipass.id',
     'https://t.app.unipass.id/connect',
-    'https://t.app.unipass.id/sign')
+    'https://t.app.unipass.id/authorize')
   const upAccount = await UP.connect()
   user.setNewName(upAccount.username)
 }
@@ -50,6 +50,12 @@ const login = async() => {
       sig,
     },
   })
+
+  axios.post('https://l3testapi.unipass.vip/account/discord', {
+    uniPassId: name.value,
+    discordId: dcid.value,
+  })
+
   openModal.value = true
 }
 
