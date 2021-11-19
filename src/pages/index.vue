@@ -51,7 +51,7 @@ const login = async() => {
     },
   })
 
-  axios.post('https://l3testapi.unipass.vip/account/discord', {
+  axios.post('https://t.api.unipass.id/pre/account/discord', {
     uniPassId: name.value,
     discordId: dcid.value,
   })
