@@ -25,9 +25,9 @@ const openModal = ref(false)
 
 const connect = async() => {
   UP.config(
-    't.app.unipass.id',
-    'https://t.app.unipass.id/connect',
-    'https://t.app.unipass.id/authorize')
+    'beta.app.unipass.id',
+    'https://beta.app.unipass.id/connect',
+    'https://beta.app.unipass.id/authorize')
   const upAccount = await UP.connect()
   user.setNewName(upAccount.username)
 }
