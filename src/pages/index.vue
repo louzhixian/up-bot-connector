@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import UP, { UPAuthMessage } from 'up-core-test'
 import axios from 'axios'
+import { atob } from 'js-base64'
 import { useUserStore } from '~/stores/user'
 
 const Guild = '881192262439166023'
@@ -14,7 +15,7 @@ const router = useRouter()
 const dcid = computed(() => {
   const dcid = router.currentRoute.value.query.dcid
   if (typeof dcid === 'string')
-    return dcid.replace('~', '#')
+    return atob(dcid)
   return null
 })
 

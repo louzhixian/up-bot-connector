@@ -19,6 +19,7 @@ specifiers:
   eslint: ^8.2.0
   eslint-plugin-cypress: ^2.12.1
   https-localhost: ^4.7.0
+  js-base64: ^3.7.2
   markdown-it-link-attributes: ^3.0.0
   markdown-it-prism: ^2.2.1
   nprogress: ^0.2.0
@@ -49,6 +50,7 @@ dependencies:
   '@vueuse/head': 0.6.0_vue@3.2.21
   axios: 0.24.0
   daisyui: 1.16.2
+  js-base64: 3.7.2
   nprogress: 0.2.0
   pinia: 2.0.2_typescript@4.4.4+vue@3.2.21
   prism-theme-vars: 0.2.2
@@ -1429,8 +1431,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.2.0-beta.18
-      '@intlify/shared': 9.2.0-beta.18
+      '@intlify/message-compiler': 9.2.0-beta.20
+      '@intlify/shared': 9.2.0-beta.20
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.1.9_vue@3.2.21
@@ -1465,11 +1467,11 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /@intlify/message-compiler/9.2.0-beta.18:
-    resolution: {integrity: sha512-Slfskm4Pwee8g60gbYYAUPGiI1Ypm3VPpv1eLjdet9+oNxJ7gsEvMMJ47SzJqrLhviInnQ1KEUx+SRH07N3yWw==}
+  /@intlify/message-compiler/9.2.0-beta.20:
+    resolution: {integrity: sha512-nbJFuzwm1XZuKzhXqcURYabZ7JqyhyibIs3i661NXrblutd8ZiuOWUB20zIYjKFRLL38QWIijUclOyp+CSW5YQ==}
     engines: {node: '>= 12'}
     dependencies:
-      '@intlify/shared': 9.2.0-beta.18
+      '@intlify/shared': 9.2.0-beta.20
       source-map: 0.6.1
     dev: true
 
@@ -1492,8 +1494,8 @@ packages:
     engines: {node: '>= 10'}
     dev: false
 
-  /@intlify/shared/9.2.0-beta.18:
-    resolution: {integrity: sha512-1t3mebXtGQTYxfRz3W14/rGc2r8Laiunfx0oTafYKGo2sHzCeEvNhVAZXBPEKAyq2lWnfTlgsX3ACY8LKtyv/Q==}
+  /@intlify/shared/9.2.0-beta.20:
+    resolution: {integrity: sha512-mwdvobi1gBNWt+dgd68IuRHG3xh6BXs0472ZO8vClr49HOhoVg9M+myQQntBQBHblcXreM8NX/pLkBzXSyUfmQ==}
     engines: {node: '>= 12'}
     dev: true
 
@@ -1502,7 +1504,7 @@ packages:
     engines: {node: '>= 12'}
     dependencies:
       '@intlify/bundle-utils': 2.1.0_vue-i18n@9.1.9
-      '@intlify/shared': 9.2.0-beta.18
+      '@intlify/shared': 9.2.0-beta.20
       '@rollup/pluginutils': 4.1.1
       debug: 4.3.2
       fast-glob: 3.2.7
@@ -4615,6 +4617,10 @@ packages:
     resolution: {integrity: sha512-TdcJywkQtcwLxogc4rSMAi479G2eDPzfW0fLySks7TPhgZZ4s/tM6stnzayIh3gS/db3zExWJyUx4cNWrwAmoQ==}
     hasBin: true
     dev: true
+
+  /js-base64/3.7.2:
+    resolution: {integrity: sha512-NnRs6dsyqUXejqk/yv2aiXlAvOs56sLkX6nUdeaNezI5LFFLlsZjOThmwnrcwh5ZZRwZlCMnVAY3CvhIhoVEKQ==}
+    dev: false
 
   /js-stringify/1.0.2:
     resolution: {integrity: sha1-Fzb939lyTyijaCrcYjCufk6Weds=}
